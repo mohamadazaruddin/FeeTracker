@@ -1,0 +1,75 @@
+<div
+  class="modal fade show d-block"
+  tabindex="-1"
+  style="background: rgba(0, 0, 0, 0.5)"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form (ngSubmit)="submitForm()" #studentForm="ngForm">
+        <div class="modal-header">
+          <h5 class="modal-title">Add Student</h5>
+          <button
+            type="button"
+            class="btn-close"
+            aria-label="Close"
+            (click)="close()"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label class="form-label">Name</label>
+            <input
+              type="text"
+              class="form-control"
+              name="name"
+              [(ngModel)]="student.name"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Roll Number</label>
+            <input
+              type="text"
+              class="form-control"
+              name="rollNumber"
+              [(ngModel)]="student.rollNumber"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Class</label>
+            <input
+              type="text"
+              class="form-control"
+              name="class"
+              [(ngModel)]="student.class"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Total Fee</label>
+            <input
+              type="number"
+              class="form-control"
+              name="totalFee"
+              [(ngModel)]="student.totalFee"
+              required
+            />
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button
+            type="submit"
+            class="btn btn-primary"
+            [disabled]="studentForm.invalid"
+          >
+            Submit
+          </button>
+          <button type="button" class="btn btn-secondary" (click)="close()">
+            Cancel
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,57 @@
+<div class="sidebar p-3">
+  <div class="d-flex flex-column justify-center align-items-center">
+    <h2 class="text-white mt-2" (click)="changePage('home')">FEE TRACKER</h2>
+    <div class="profile mt-4">
+      <img
+        src="/profile.png"
+        alt="Profile Image"
+        class="rounded-circle"
+        width="100"
+      />
+      <h4 class="text-white mt-3">Karthi Madesh</h4>
+      <p class="text-warning">Admin</p>
+    </div>
+    <nav class="nav flex-column mt-2 w-100">
+      <a
+        href="#"
+        class="nav-link text-white"
+        [ngClass]="{ 'active': pageName === 'home' }"
+        (click)="changePage('home')"
+      >
+        <i class="fas fa-home"></i> Home
+      </a>
+
+      <a
+        href="#"
+        class="nav-link text-white"
+        [ngClass]="{ 'active': pageName === 'student' }"
+        (click)="changePage('student')"
+      >
+        <i class="fas fa-user-graduate"></i> Students
+      </a>
+
+      <a
+        href="#"
+        class="nav-link text-white"
+        [ngClass]="{ 'active': pageName === 'payment' }"
+        (click)="changePage('student')"
+      >
+        <i class="fas fa-dollar-sign"></i> Payment
+      </a>
+
+      <a
+        href="#"
+        class="nav-link text-white"
+        [ngClass]="{ 'active': pageName === 'setting' }"
+        (click)="changePage('student')"
+      >
+        <i class="fas fa-cog"></i> Setting
+      </a>
+    </nav>
+    <div class="mt-5 mb-4">
+      <a href="#" class="nav-link text-white"
+        ><i class="fas fa-sign-out-alt"></i> Logout</a
+      >
+    </div>
+  </div>
+</div>
